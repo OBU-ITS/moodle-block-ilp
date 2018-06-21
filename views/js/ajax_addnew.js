@@ -92,7 +92,7 @@ M.ilp_ajax_addnew = {
                                     scriptel.textContent = response.script; // Put the Javascript inside the script tag
                                     document.body.appendChild(scriptel); // Add the script tag to the page.
 
-                                    var comment_send_params = new Object();
+                                    var comment_send_params = new stdClass();
                                     comment_send_params.dom_entryid = entryid;
                                     comment_send_params.entryid = numerical_entry_id;
                                     comment_send_params.report_id = report_id;
@@ -141,7 +141,7 @@ M.ilp_ajax_addnew = {
         // Stop the form submitting normally
         e.preventDefault();
 
-        var formwrapper =new Object();
+        var formwrapper =new stdClass();
         formwrapper.id = 'mform1';
 
         var process_url = this.root + '/blocks/ilp/actions/edit_entrycomment.ajax.php';
@@ -255,7 +255,7 @@ M.ilp_ajax_addnew = {
         // Stop the form submitting normally
         e.preventDefault();
 
-        var formwrapper =new Object();
+        var formwrapper =new stdClass();
         formwrapper.id = 'mform1';
 
         // Send the request
@@ -441,7 +441,7 @@ M.ilp_ajax_addnew = {
         if (typeof tinyMCE !== 'undefined' && tinyMCE.hasOwnProperty('triggerSave')) {
             tinyMCE.triggerSave();
         }
-        var formwrapper =new Object();
+        var formwrapper =new stdClass();
         formwrapper.id = 'mform1';
 
         if (this.pagename != 'view_studentreports') {
@@ -704,7 +704,7 @@ M.ilp_ajax_addnew = {
             tinyMCE.triggerSave();
         }
 
-        var formwrapper =new Object();
+        var formwrapper =new stdClass();
         formwrapper.id = 'mform1';
         var pagename_param = '';
         if (this.pagename == 'view_studentreports') {
